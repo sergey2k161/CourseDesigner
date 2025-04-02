@@ -11,6 +11,7 @@ namespace CourseDesigner.Business.Extension
             services.AddScoped<IProblemService, ProblemService>();
             services.AddScoped<ILessonService, LessonService>();
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IUserService, UserService>();
 
             return services;
         }

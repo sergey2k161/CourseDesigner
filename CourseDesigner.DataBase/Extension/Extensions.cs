@@ -13,6 +13,7 @@ namespace CourseDesigner.DataBase.Extension
             services.AddScoped<IProblemRepository, ProblemRepository>();
             services.AddScoped<ILessonRepository, LessonRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
 
             services.AddDbContext<AppDbContext>(x =>

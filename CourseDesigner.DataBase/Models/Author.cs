@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CourseDesigner.DataBase.Models
 {
@@ -10,9 +11,13 @@ namespace CourseDesigner.DataBase.Models
         public Guid CommonUserId { get; set; }
         public CommonUser CommonUser { get; set; }
 
-        public Guid UserId { get; set; }
-        public User User { get; set; }
+        public string Name { get; set; }
 
+        //public Guid UserId { get; set; }
+        //public User User { get; set; }
+
+        [EmailAddress]
+        public string Email { get; set; }
 
         public List<Course>? Courses { get; set; }
     }

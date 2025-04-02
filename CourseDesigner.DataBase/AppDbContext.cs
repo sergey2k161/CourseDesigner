@@ -11,6 +11,7 @@ namespace CourseDesigner.DataBase
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Problem> Problems { get; set; }

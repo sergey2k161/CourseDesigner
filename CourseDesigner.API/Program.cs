@@ -1,5 +1,8 @@
 using CourseDesigner.Business.Extension;
+using CourseDesigner.DataBase;
 using CourseDesigner.DataBase.Extension;
+using CourseDesigner.DataBase.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace CourseDesigner.API
 {
@@ -14,6 +17,10 @@ namespace CourseDesigner.API
 
 
             builder.Services.AddOpenApi();
+
+            builder.Services.AddIdentity<CommonUser, IdentityRole<Guid>>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
 
             builder.Services.AddDataBase();
             builder.Services.AddBussiness();
